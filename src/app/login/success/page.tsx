@@ -1,10 +1,10 @@
 "use client";
 
-import { useRouter } from "next/router";
-import { useEffect } from "react";
+// import { useRouter } from "next/router";
+// import { useEffect } from "react";
 
 const SuccessPage = () => {
-  const router = useRouter;
+  // const router = useRouter;
 
   // useEffect(() => {
   //   const { searchParams } = router.query;
