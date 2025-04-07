@@ -1,3 +1,5 @@
+'use client";';
+
 import Flex from "@/components/common/shared/layout/Flex";
 import Kakao_Logo from "@/Kakao_Logo.svg";
 
@@ -6,13 +8,25 @@ import Image from "next/image";
 import Text from "@/components/common/shared/ui/Text";
 
 export default function LoginButtonSection() {
+  const handleKakaoLogin = async () => {
+    await fetch("http://192.168.138.28:8080//api/v1/oauth/kakao", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  };
+
   return (
     <Flex
       flexDirection="flex-col"
       justifyContent="justify-normal"
       gap="gap-3.5"
     >
-      <button className="pb-4 pt-4 bg-kakao-yellow rounded-lg">
+      <button
+        className="pb-4 pt-4 bg-kakao-yellow rounded-lg"
+        onClick={() => handleKakaoLogin()}
+      >
         <Flex
           flexDirection="flex-row"
           alignItems="items-center"
